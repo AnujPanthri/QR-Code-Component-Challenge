@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+/* || CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* || ROOT VARIABLES */
+:root {
+    --WHITE: hsl(0, 0%, 100%);
+    --LIGHT-GRAY: hsl(212, 45%, 89%);
+    --GRAYISH-BLUE: hsl(220, 15%, 55%);
+    --DARK-BLUE: hsl(218, 44%, 22%);
+}
+
+html {
+    font-family: "Outfit", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: var(--LIGHT-GRAY);
+    font-size: 15px;
+
+    position: relative;
+}
+
+main{
+    flex-grow :1;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.qr_container {
+
+    background-color: var(--WHITE);
+    width: min(90%,310px);
+    padding: 1.1em;
+    border-radius: 17px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    row-gap: 1em;
+
+}
+
+.qr_code_img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.qr_container :is(.title, .text) {
+    margin: 0 0.5em;
+    text-align: center;
+}
+
+.qr_container .title {
+    color: var(--DARK-BLUE);
+    font-size: 1.4em;
+    font-weight: 700;
+}
+
+.qr_container .text {
+    color: var(--GRAYISH-BLUE);
+    font-weight: 400;
+    margin-bottom: 1em;
+}
+
